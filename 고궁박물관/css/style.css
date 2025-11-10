@@ -122,6 +122,9 @@ main ul li {
 
   vertical-align: middle;
 }
+#second a > h3 {
+  margin-top: 100px;
+}
 main ul li:before {
   content: "";
   position: absolute;
