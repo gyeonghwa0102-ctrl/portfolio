@@ -2,11 +2,11 @@
 /*메인, 고객, 바텀 자바스크립트*/
 @font-face {
   font-family: "BKBulMatPro";
-  src: url(./BKBulMatPro-Bold.woff);
+  src: url(../font/BKBulMatPro-Bold.woff);
 }
 @font-face {
   font-family: "SDGothic";
-  src: url(./SDGothicNeoRound-hEb.otf);
+  src: url(../font/SDGothicNeoRound-hEb.otf);
 }
 * {
   margin: 0;
