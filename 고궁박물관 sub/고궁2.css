@@ -121,6 +121,7 @@ section.visual nav .right .hambuger label span {
   height: 1px;
   background: #000;
   margin: 9px 0;
+  transition: 0.5s;
 }
 
 #menu:checked ~ section.visual nav .right .hambuger label span.bar1 {
@@ -148,49 +149,100 @@ section.visual nav .right .hambuger label span {
   backdrop-filter: blur(3px);
   z-index: 999;
 }
-main ul {
-  display: flex;
-  justify-content: center;
-  gap: 0.7vw;
+.con {
   padding: 2vw;
-  margin: 50px 0;
   box-sizing: border-box;
+  font-family: "Pretendard";
 }
-main ul li {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  padding: 1.3vw;
-  box-sizing: border-box;
+.con .left {
+  width: 460px;
+}
+.con .left .titwrap h3 {
+  font-size: 28px;
   position: relative;
-  cursor: pointer;
+  padding-left: 44px;
+  margin-bottom: 24px;
+  color: #0e0e0e;
 }
-#second a {
-  display: block;
-}
-#second .mySwiper {
-  width: 247px;
-  height: 360px;
-  background-image: url(https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=70cff0eaba664585877fcd67cc6f63fd&fileSn=1);
-  background-size: cover;
-  text-align: center;
-  line-height: 360px;
-}
-#second .mySwiper .swiper-slide img {
-  width: 195px;
-  height: 284px;
-  object-fit: cover;
-
-  vertical-align: middle;
-}
-#second a > h3 {
-  margin-top: 100px;
-}
-
-main ul li:before {
-  content: "";
+.con .left .titwrap h3::before {
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
+  width: 1.66vw;
+  content: "";
+  background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/sub/ico-title-arrow.svg);
+  aspect-ratio: 16/11;
+  background-size: cover;
+}
+.con .left .titwrap p {
+  font-size: 18px;
+  color: #5e5e5e;
+  margin-bottom: 20px;
+}
+.con .left .floorwrap .onefloor,
+.con .left .floorwrap .lastfloor,
+.con .left .floorwrap .secfloor {
+  padding: 30px 16px 16px 20px;
+  box-sizing: border-box;
+}
+
+.con .left .floorwrap .tit {
+  display: flex;
+  justify-content: space-between;
+}
+.con .left .floorwrap .tit > h3 {
+  font-size: 24px;
+  color: #8e8e8e;
+}
+.con .left .floorwrap .tit > h3::after {
+  content: "|";
+  color: #ccc;
+  padding-left: 20px;
+}
+.con .left .floorwrap .tit > p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 100px;
+  color: #8e8e8e;
+  position: relative;
+  margin-bottom: 30px;
+}
+.con .left .floorwrap .lastfloor .tit > p {
+  padding-right: 0;
+}
+.con .left .floorwrap .lastfloor > p,
+.con .left .floorwrap .onefloor > p,
+.con .left .floorwrap .secfloor > p {
+  font-size: 17px;
+  color: #5e5e5e;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+.con .left .floorwrap ul {
+  display: flex;
+  line-height: 1.3;
+  color: #fafafa;
+  gap: 20px;
+  margin: 20px 0 10px 0;
+}
+.con .left .floorwrap .onefloor ul > li,
+.con .left .floorwrap .secfloor ul > li,
+.con .left .floorwrap .lastfloor ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(30deg, #646464 0%, #020202 25%, #646464 95%);
+  border-radius: 5px;
+  height: 54px;
+  width: 126px;
+  margin-bottom: 20px;
+}
+.con .left .floorwrap ul > li > a {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+.con .left .floorwrap > div {
   width: 100%;
   height: 100%;
   border: 0.2vw solid transparent;
@@ -202,82 +254,4 @@ main ul li:before {
       rgba(155, 155, 155, 0.4) 100%
     )
     1;
-}
-main ul li:nth-child(odd):hover {
-  background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/ico-main-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: 250px 30px;
-}
-main ul li:nth-child(even):hover {
-  background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/ico-main-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: 250px 500px;
-}
-main ul li a > h3 {
-  display: block;
-  color: #000;
-  font-weight: bold;
-  font-size: 24px;
-  font-family: "Pretendard";
-  margin-bottom: 10px;
-}
-main ul li a > span {
-  font-family: "Pretendard";
-  color: #7e7e7e;
-}
-main ul li p > img {
-  width: 249px;
-  height: 362px;
-  object-fit: cover;
-  object-position: center;
-  margin-top: 100px;
-}
-main ul li:nth-child(even) p > img {
-  margin: 0 0 100px;
-}
-footer {
-  text-align: center;
-  font-size: 15px;
-  font-family: "Pretendard";
-  color: #6e6e6e;
-  padding: 1vw 2vw 1.6vw;
-}
-@media screen and (max-width: 1024px) {
-  header ul .logo > a > h1 {
-    font-size: 22px;
-  }
-  header ul .logo a > span {
-    font-size: 10px;
-  }
-
-  main ul {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  main ul li:before {
-    border: 3px solid transparent;
-    border-image: linear-gradient(
-        135deg,
-        rgba(255, 254, 248, 0.8) 0%,
-        rgba(155, 155, 155, 0.4) 20%,
-        rgba(255, 255, 255, 0.8) 50%,
-        rgba(155, 155, 155, 0.4) 100%
-      )
-      1;
-  }
-  main ul li {
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  main ul li:nth-child(odd):hover {
-    background-repeat: no-repeat;
-    background-position: 230px 30px;
-    background-size: 20px;
-  }
-  main ul li:nth-child(even):hover {
-    background-repeat: no-repeat;
-    background-position: 230px 500px;
-    background-size: 20px;
-  }
 }
