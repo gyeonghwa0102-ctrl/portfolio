@@ -40,6 +40,10 @@ body {
   align-items: center;
   background-color: #f5ebdc;
   padding: 0 1.875rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
   box-sizing: border-box;
 }
 .top .menu {
@@ -110,10 +114,196 @@ body {
 .top #mobile {
   display: none;
 }
+input {
+  display: none;
+}
+#fullmenu {
+  margin: 20px 0;
+  text-align: left;
+  text-transform: uppercase;
+  background-color: #f5ebdc;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  max-width: 1006px;
+  height: 100%;
+  z-index: 1000;
+  transition: 1s;
+}
+#fullmenu > ul > li {
+  padding: 20px 20px 20px 94px;
+  box-sizing: border-box;
+}
+#fullmenu > ul > li:nth-child(1),
+#fullmenu > ul > li:nth-child(2),
+#fullmenu > ul > li:nth-child(3),
+#fullmenu > ul > li:nth-child(4),
+#fullmenu > ul > li:nth-child(5) {
+  position: relative;
+}
+#fullmenu > ul > li:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 44px;
+  height: 44px;
+  background-image: url(https://www.burgerking.co.kr/img/ico_gnb_menu01.svg);
+  background-size: cover;
+}
+#fullmenu > ul > li:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 44px;
+  height: 44px;
+  background-image: url(https://www.burgerking.co.kr/img/ico_gnb_menu02.svg);
+  background-size: cover;
+}
+#fullmenu > ul > li:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 44px;
+  height: 44px;
+  background-image: url(https://www.burgerking.co.kr/img/ico_gnb_menu03.svg);
+  background-size: cover;
+}
+#fullmenu > ul > li:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 44px;
+  height: 44px;
+  background-image: url(https://www.burgerking.co.kr/img/ico_gnb_menu04.svg);
+  background-size: cover;
+}
+#fullmenu > ul > li:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 44px;
+  height: 44px;
+  background-image: url(https://www.burgerking.co.kr/img/ico_gnb_menu05.svg);
+  background-size: cover;
+}
+#fullmenu > ul > li:nth-child(2) p {
+  position: relative;
+}
+#fullmenu > ul > li:nth-child(3) p {
+  position: relative;
+}
+
+#fullmenu > ul > li:nth-child(2) p::after,
+#fullmenu > ul > li:nth-child(3) p::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 95%;
+  background-image: url(https://www.burgerking.co.kr/img/btn_acc_gnb.svg);
+  background-size: cover;
+  width: 18px;
+  height: 19px;
+}
+
+#fullmenu ul > li > a,
+#fullmenu ul > li > p {
+  font-family: "BKBulMatPro";
+  font-weight: lighter;
+  font-size: 24px;
+  color: #502314;
+}
+#fullmenu ul > li > p {
+  cursor: pointer;
+}
+#fullmenu .sub {
+  display: none;
+  width: 100%;
+  height: 298px;
+  background-color: #e4d7c8;
+  padding: 10px;
+}
+#fullmenu ul > li:nth-child(3) .sub {
+  height: 106px;
+}
+#fullmenu .sub > li {
+  padding: 10px 10px 10px 94px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding-left: 0;
+}
+#fullmenu .sub li a {
+  color: #502314;
+  font-family: "SDGothic";
+  font-weight: lighter;
+  font-size: 17px;
+}
+#fullmenu .ftop {
+  padding: 50px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+#fullmenu .ftop .logo > img {
+  height: 24px;
+  object-fit: cover;
+}
+#fullmenu > p {
+  background-color: #5023140d;
+  height: 26px;
+  width: 95px;
+  border-radius: 30px;
+  font-size: 0.815rem;
+  font-family: "SDGothic";
+  font-weight: lighter;
+  color: #502314;
+  padding: 5px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 20px;
+}
+#fullmenu .fbottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+#fullmenu .fbottom > p {
+  background-color: #5023140d;
+  height: 26px;
+  width: 100px;
+  border-radius: 30px;
+  font-size: 0.9375rem;
+  font-family: "SDGothic";
+  font-weight: lighter;
+  color: #502314;
+  padding: 5px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 20px;
+}
+#fullmenu .fbottom > .sns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+}
+#fullmenu .fbottom .sns > li > a > img {
+  width: 32px;
+  height: 32px;
+}
 main {
   display: flex;
   justify-content: space-between;
   gap: 1.25rem;
+  margin-top: 100px;
 }
 main .first {
   width: 68.75rem;
@@ -425,11 +615,115 @@ h1 {
   font-family: "SDGothic";
   margin-bottom: 3.125rem;
 }
-.bottom > p {
-  width: 30%;
+.phone_ui {
+  position: relative;
+  width: 405px;
+  height: 377px;
+  background: url(https://www.burgerking.co.kr/img/bg_appdown_phone.png)
+    no-repeat 0 0;
+  overflow: hidden;
 }
-.bottom > p img {
+.phone_ui .phone {
+  position: absolute;
+  left: 131px;
+  top: 45px;
+  width: 231px;
+  height: 332px;
+  border-radius: 24px 24px 0 0;
+  overflow: hidden;
+}
+.phone_ui .phone .list {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  height: 100%;
+  animation: slide 5s linear infinite;
+}
+.phone_ui .phone .list li {
+  position: relative;
   width: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+.phone_ui .phone .list li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.phone_ui .phone .list li:first-child img {
+  animation: an01_img 5s linear infinite;
+}
+
+.phone_ui .phone .list li:nth-child(2) img {
+  animation: an02_img 5s linear infinite;
+}
+
+.phone_ui .phone .list li:nth-child(3) img {
+  animation: an03_img 5s linear infinite;
+}
+@keyframes slide {
+  25% {
+    left: 0;
+  }
+
+  30% {
+    left: -100%;
+  }
+
+  60% {
+    left: -100%;
+  }
+
+  65% {
+    left: -200%;
+  }
+
+  to {
+    left: -200%;
+  }
+}
+@keyframes an01_img {
+  10% {
+    top: 0;
+  }
+
+  20% {
+    top: -20%;
+  }
+
+  to {
+    top: -20%;
+  }
+}
+
+@keyframes an02_img {
+  35% {
+    top: 0;
+  }
+
+  40% {
+    top: -20%;
+  }
+
+  to {
+    top: -20%;
+  }
+}
+
+@keyframes an03_img {
+  70% {
+    top: 0;
+  }
+
+  80% {
+    top: -20%;
+  }
+
+  to {
+    top: -20%;
+  }
 }
 .bottom .app {
   padding: 0 3.125rem;
@@ -479,24 +773,47 @@ h1 {
   padding: 8px;
   box-sizing: border-box;
 }
+#mobilefooter > ul > li:nth-child(2) p {
+  position: relative;
+}
+#mobilefooter > ul > li:nth-child(3) p {
+  position: relative;
+}
+#mobilefooter > ul > li:nth-child(2) p::after,
+#mobilefooter > ul > li:nth-child(3) p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-image: url(https://www.burgerking.co.kr/img/ico_darrow01.svg);
+  background-size: cover;
+  width: 12px;
+  height: 12px;
+}
 #mobilefooter ul > li > hr {
   width: 700px;
-  height: 0;
-  background-color: #f5ebdc;
-  margin-bottom: 10px;
+  height: 1px;
+  background: #f5ebdc;
+  margin-bottom: 15px;
+  border: 0;
 }
-#mobilefooter ul > li > a {
+#mobilefooter ul > li > a,
+#mobilefooter ul > li > p {
   padding-left: 80px;
   font-family: "SDGothic";
   font-weight: lighter;
   font-size: 15px;
   color: #89665b;
 }
+#mobilefooter ul > li > p {
+  cursor: pointer;
+}
 #mobilefooter .sub {
   display: none;
 }
-#mobilefooter .sub.on {
-  display: block;
+#mobilefooter .sub li a {
+  color: #89665bb3;
+  font-weight: lighter;
 }
 #mobilefooter footer {
   width: 100%;
@@ -520,7 +837,7 @@ footer .use {
 }
 footer .use li a {
   font-size: 0.75rem;
-  color: #856559;
+  color: #89665bb3;
 }
 footer .use li:nth-child(2) a {
   text-decoration: underline;
@@ -548,7 +865,7 @@ footer .fbottom .left {
   gap: 1.25rem;
   font-size: 0.75rem;
   line-height: 1.25rem;
-  color: #856559;
+  color: #89665bb3;
 }
 footer .fbottom .left ul li:nth-child(2) a {
   text-decoration: underline;
@@ -632,6 +949,9 @@ footer .fbottom .right .sns img {
   .top .right {
     display: none;
   }
+  .top #mobile {
+    display: block;
+  }
   main {
     flex-wrap: wrap;
     justify-content: center;
@@ -668,9 +988,6 @@ footer .fbottom .right .sns img {
   }
 }
 @media screen and (max-width: 860px) {
-  .top #mobile {
-    display: block;
-  }
   main .right .sec {
     width: 50vw;
   }
@@ -805,6 +1122,9 @@ footer .fbottom .right .sns img {
     display: none;
   }
   #mobilefooter {
+    display: block;
+  }
+  #fullmenu {
     display: block;
   }
   footer {

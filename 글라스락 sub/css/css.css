@@ -251,6 +251,7 @@ footer .right .sns {
 footer .right .sns > li > img {
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 footer .right .sns > li:last-child {
   border: 1px solid;

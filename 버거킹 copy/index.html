@@ -4,6 +4,8 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <!-- <script src="jquery-ui.min.js"></script> -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,6 +57,97 @@
         <p id="mobile">
           <img src="https://www.burgerking.co.kr/img/ico_burger.svg" alt="" />
         </p>
+      </div>
+      <div id="fullmenu">
+        <div class="ftop">
+          <div class="logo">
+            <img src="https://www.burgerking.co.kr/img/bg_logo.svg" alt="" />
+          </div>
+          <div class="x">
+            <img
+              src="https://www.burgerking.co.kr/img/btn_pop_close.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <ul>
+          <li><a href="#">menu</a></li>
+          <li>
+            <p>story</p>
+            <ul class="sub">
+              <li>
+                <a href="#">브랜드</a>
+              </li>
+              <li><a href="#">Why 버거킹</a></li>
+              <li><a href="#">ESG 경영</a></li>
+              <li><a href="#">Smart QSR</a></li>
+              <li><a href="#">수상실적</a></li>
+              <li><a href="#">광고영상</a></li>
+            </ul>
+          </li>
+          <li>
+            <p>news</p>
+            <ul class="sub">
+              <li>
+                <a href="#">이벤트</a>
+              </li>
+              <li><a href="#">공지사항</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">store</a>
+          </li>
+          <li>
+            <a href="#">customer</a>
+          </li>
+        </ul>
+        <p>
+          <span
+            ><img
+              src="https://www.burgerking.co.kr/img/ico_tit_store.svg"
+              alt="" /></span
+          >가맹점 모집
+        </p>
+        <div class="fbottom">
+          <p>
+            채용사이트
+            <span
+              ><img
+                src="https://www.burgerking.co.kr/img/ico_bt_link.svg"
+                alt=""
+            /></span>
+          </p>
+          <ul class="sns">
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.burgerking.co.kr/img/ico_sns_instagram.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.burgerking.co.kr/img/ico_sns_facebook.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.burgerking.co.kr/img/ico_sns_x.svg"
+                  alt=""
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://www.burgerking.co.kr/img/ico_sns_youtube.svg"
+                  alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
       </div>
       <main>
         <div class="first">
@@ -367,12 +460,30 @@
         </div>
       </div>
       <div class="bottom">
-        <p>
-          <img
-            src="https://www.burgerking.co.kr/img/bg_appdown_phone_MOB.png"
-            alt=""
-          />
-        </p>
+        <div class="phone_ui">
+          <div class="phone">
+            <ul class="list">
+              <li>
+                <img
+                  src="https://www.burgerking.co.kr/img/img_home_phone_cont01.png"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.burgerking.co.kr/img/img_home_phone_cont02.png"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.burgerking.co.kr/img/img_home_phone_cont03.png"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="app">
           <h2>
             <span>오직 버거킹 앱에서</span>만 가능한 <span>혜택</span>
@@ -414,7 +525,7 @@
         <li><a href="#">menu</a></li>
         <li>
           <hr />
-          <a href="#">story</a>
+          <p>story</p>
           <ul class="sub">
             <li>
               <hr />
@@ -429,13 +540,15 @@
         </li>
         <li>
           <hr />
-          <a href="#">news</a>
+          <p>news</p>
           <ul class="sub">
-            <li><a href="#">이벤트</a></li>
+            <li>
+              <hr />
+              <a href="#">이벤트</a>
+            </li>
             <li><a href="#">공지사항</a></li>
           </ul>
         </li>
-
         <li>
           <hr />
           <a href="#">store</a>
@@ -538,6 +651,24 @@
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+      });
+      $("#mobilefooter li:nth-child(2)").click(function () {
+        $("#mobilefooter li:nth-child(2) .sub").slideToggle(1000);
+      });
+      $("#mobilefooter li:nth-child(3)").click(function () {
+        $("#mobilefooter li:nth-child(3) .sub").slideToggle(1000);
+      });
+      $("#fullmenu li:nth-child(2)").click(function () {
+        $("#fullmenu li:nth-child(2) .sub").slideToggle(1000);
+      });
+      $("#fullmenu li:nth-child(3)").click(function () {
+        $("#fullmenu li:nth-child(3) .sub").slideToggle(1000);
+      });
+      $("#mobile").click(function () {
+        $("#fullmenu").css("left", "0");
+      });
+      $("#fullmenu .ftop .x").click(function () {
+        $("#fullmenu").css("left", "-100%");
       });
     </script>
   </body>

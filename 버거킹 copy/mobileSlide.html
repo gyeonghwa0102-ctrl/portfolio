@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .phone_ui {
+        position: relative;
+        width: 405px;
+        height: 377px;
+        background: url(https://www.burgerking.co.kr/img/bg_appdown_phone.png)
+          no-repeat 0 0;
+        overflow: hidden;
+      }
+      .phone_ui .phone {
+        position: absolute;
+        left: 131px;
+        top: 45px;
+        width: 231px;
+        height: 332px;
+        border-radius: 24px 24px 0 0;
+        overflow: hidden;
+      }
+      .phone_ui .phone .list {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: flex;
+        height: 100%;
+        animation: slide 5s linear infinite;
+      }
+      .phone_ui .phone .list li {
+        position: relative;
+        width: 100%;
+        min-width: 100%;
+        overflow: hidden;
+      }
+      .phone_ui .phone .list li img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+      .phone_ui .phone .list li:first-child img {
+        animation: an01_img 5s linear infinite;
+      }
+
+      .phone_ui .phone .list li:nth-child(2) img {
+        animation: an02_img 5s linear infinite;
+      }
+
+      .phone_ui .phone .list li:nth-child(3) img {
+        animation: an03_img 5s linear infinite;
+      }
+      @keyframes slide {
+        25% {
+          left: 0;
+        }
+
+        30% {
+          left: -100%;
+        }
+
+        60% {
+          left: -100%;
+        }
+
+        65% {
+          left: -200%;
+        }
+
+        to {
+          left: -200%;
+        }
+      }
+      @keyframes an01_img {
+        10% {
+          top: 0;
+        }
+
+        20% {
+          top: -20%;
+        }
+
+        to {
+          top: -20%;
+        }
+      }
+
+      @keyframes an02_img {
+        35% {
+          top: 0;
+        }
+
+        40% {
+          top: -20%;
+        }
+
+        to {
+          top: -20%;
+        }
+      }
+
+      @keyframes an03_img {
+        70% {
+          top: 0;
+        }
+
+        80% {
+          top: -20%;
+        }
+
+        to {
+          top: -20%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="phone_ui">
+      <div class="phone">
+        <ul class="list">
+          <li>
+            <img
+              src="https://www.burgerking.co.kr/img/img_home_phone_cont01.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.burgerking.co.kr/img/img_home_phone_cont02.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://www.burgerking.co.kr/img/img_home_phone_cont03.png"
+              alt=""
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
