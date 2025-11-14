@@ -237,3 +237,8 @@ section.visual .swiper-slide:nth-child(5) .txt img {
   opacity: 1;
   font-family: "Pretendard";
 }
+@media screen and (max-width: 768px) {
+  section.visual nav .right .mall {
+    display: none;
+  }
+}

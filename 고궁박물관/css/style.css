@@ -78,7 +78,7 @@ body {
   width: 100%;
   max-width: 1905px;
   margin: 0 auto;
-  background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/main_background.jpg);
+  background-image: url(../img/main_background.jpg);
 }
 section.visual nav {
   width: 100%;
@@ -170,7 +170,7 @@ main ul li {
 #second .mySwiper {
   width: 247px;
   height: 360px;
-  background-image: url(https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=70cff0eaba664585877fcd67cc6f63fd&fileSn=1);
+  background-image: url(../img/bgimg);
   background-size: cover;
   text-align: center;
   line-height: 360px;
@@ -204,12 +204,12 @@ main ul li:before {
     1;
 }
 main ul li:nth-child(odd):hover {
-  background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/ico-main-arrow.svg);
+  background-image: url(../img/ico-main-arrow.svg);
   background-repeat: no-repeat;
   background-position: 250px 30px;
 }
 main ul li:nth-child(even):hover {
-  background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/ico-main-arrow.svg);
+  background-image: url(../img/ico-main-arrow.svg);
   background-repeat: no-repeat;
   background-position: 250px 500px;
 }
