@@ -280,7 +280,7 @@ section#foot .right p {
   margin-top: 10px;
   padding-bottom: 5px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .visual {
     padding: 0;
   }
@@ -288,20 +288,10 @@ section#foot .right p {
     padding: 0 5%;
     box-sizing: border-box;
   }
-  .visual h2 {
-    font-size: 2.5em !important;
-    font-weight: 400 !important;
-  }
-  .visual nav .right .mall {
-    display: none;
-  }
   section .con > img,
   section#foot {
     padding: 2rem 2.5rem 0;
     margin: 0;
-  }
-  section .con {
-    padding: 0;
   }
   section .con > h1 {
     font-size: 1.6em !important;
@@ -310,6 +300,29 @@ section#foot .right p {
   }
   section .con > p {
     font-size: 0.875rem;
+  }
+  section .con .swiper-slide img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  #fullmenu {
+    width: 100%;
+  }
+  #menu:checked ~ section.visual::after {
+    display: none;
+  }
+  .visual h2 {
+    font-size: 2.5em !important;
+    font-weight: 400 !important;
+  }
+  .visual nav .right .mall {
+    display: none;
+  }
+  section .con {
+    padding: 0;
   }
   section .con .swiper-slide img {
     width: 90px;
