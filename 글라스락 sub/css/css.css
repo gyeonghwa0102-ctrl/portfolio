@@ -114,7 +114,7 @@ section.visual nav .right .hambuger label span {
   margin: 0.563rem 0;
   transition: 0.5s;
 }
-section.visual h1 {
+section.visual h2 {
   font-family: "Pretendard";
   font-weight: 200;
   color: #fff;
@@ -188,14 +188,14 @@ section.visual h1 {
 #mall_btn.on {
   opacity: 0;
 }
-section {
+section .con {
   height: 100vh;
   text-align: center;
   padding-top: 9.375rem;
   box-sizing: border-box;
   font-family: "Pretendard";
 }
-section div > h1 {
+section .con > h1 {
   font-size: 2.813rem;
   font-weight: 300;
   margin-top: 3.125rem;
@@ -281,15 +281,48 @@ section#foot .right p {
   padding-bottom: 5px;
 }
 @media screen and (max-width: 768px) {
+  .visual {
+    padding: 0;
+  }
+  .visual nav {
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+  .visual h2 {
+    font-size: 2.5em !important;
+    font-weight: 400 !important;
+  }
   .visual nav .right .mall {
     display: none;
   }
   section .con > img,
   section#foot {
-    padding: 0.5%;
+    padding: 2rem 2.5rem 0;
     margin: 0;
+  }
+  section .con {
+    padding: 0;
+  }
+  section .con > h1 {
+    font-size: 1.6em !important;
+    font-weight: 400 !important;
+    margin-top: 1.875rem;
+  }
+  section .con > p {
+    font-size: 0.875rem;
+  }
+  section .con .swiper-slide img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
   }
   section#foot {
     flex-wrap: wrap;
+    position: relative;
+  }
+  section#foot .right .sns {
+    position: absolute;
+    left: 6%;
+    top: 65%;
   }
 }
