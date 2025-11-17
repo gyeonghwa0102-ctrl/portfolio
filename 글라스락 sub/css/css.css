@@ -288,20 +288,13 @@ section#foot .right p {
 @media screen and (max-width: 1024px) {
   .visual {
     padding: 0;
-<<<<<<< HEAD
   }
   section .con > img {
     padding: 200px 2.5rem 0;
-=======
+    margin: 0;
   }
-  .visual nav {
-    padding: 0 5%;
-    box-sizing: border-box;
-  }
-  section .con > img,
-  section#foot {
-    padding: 2rem 2.5rem 0;
->>>>>>> 0dea1a05e6d4799b81effe04a4e8e84e2938085a
+  section#footer {
+    padding: 0 2.5rem 0;
     margin: 0;
   }
   section .con > h1 {
@@ -341,7 +334,6 @@ section#foot .right p {
     object-fit: cover;
   }
   section#foot {
-<<<<<<< HEAD
     padding: 0 2.5rem 0;
     margin: 0;
   }
@@ -375,8 +367,6 @@ section#foot .right p {
     height: 60px;
   }
   section#foot {
-=======
->>>>>>> 0dea1a05e6d4799b81effe04a4e8e84e2938085a
     flex-wrap: wrap;
     position: relative;
   }
