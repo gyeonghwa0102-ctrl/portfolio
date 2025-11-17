@@ -293,7 +293,7 @@ section#foot .right p {
     padding: 200px 2.5rem 0;
     margin: 0;
   }
-  section#footer {
+  section#foot {
     padding: 0 2.5rem 0;
     margin: 0;
   }
@@ -306,8 +306,8 @@ section#foot .right p {
     font-size: 0.875rem;
   }
   section .con .swiper-slide img {
-    width: 90px;
-    height: 60px;
+    width: 60px;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -327,15 +327,6 @@ section#foot .right p {
   }
   section .con {
     padding: 0;
-  }
-  section .con .swiper-slide img {
-    width: 90px;
-    height: 60px;
-    object-fit: cover;
-  }
-  section#foot {
-    padding: 0 2.5rem 0;
-    margin: 0;
   }
   section .con > h1 {
     font-size: 1.6em !important;
