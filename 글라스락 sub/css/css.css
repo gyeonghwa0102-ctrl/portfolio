@@ -288,12 +288,60 @@ section#foot .right p {
 @media screen and (max-width: 1024px) {
   .visual {
     padding: 0;
+<<<<<<< HEAD
   }
   section .con > img {
     padding: 200px 2.5rem 0;
+=======
+  }
+  .visual nav {
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
+  section .con > img,
+  section#foot {
+    padding: 2rem 2.5rem 0;
+>>>>>>> 0dea1a05e6d4799b81effe04a4e8e84e2938085a
     margin: 0;
   }
+  section .con > h1 {
+    font-size: 1.6em !important;
+    font-weight: 400 !important;
+    margin-top: 1.875rem;
+  }
+  section .con > p {
+    font-size: 0.875rem;
+  }
+  section .con .swiper-slide img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  #fullmenu {
+    width: 100%;
+  }
+  #menu:checked ~ section.visual::after {
+    display: none;
+  }
+  .visual h2 {
+    font-size: 2.5em !important;
+    font-weight: 400 !important;
+  }
+  .visual nav .right .mall {
+    display: none;
+  }
+  section .con {
+    padding: 0;
+  }
+  section .con .swiper-slide img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+  }
   section#foot {
+<<<<<<< HEAD
     padding: 0 2.5rem 0;
     margin: 0;
   }
@@ -327,6 +375,8 @@ section#foot .right p {
     height: 60px;
   }
   section#foot {
+=======
+>>>>>>> 0dea1a05e6d4799b81effe04a4e8e84e2938085a
     flex-wrap: wrap;
     position: relative;
   }
