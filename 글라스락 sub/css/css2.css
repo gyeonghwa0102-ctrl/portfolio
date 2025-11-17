@@ -221,10 +221,26 @@ section.con5 {
 section.con5 p {
   margin-bottom: 50px;
 }
-section .mySwiper {
-  margin: 0 200px;
+section.con5 .mySwiper {
+  margin: 0 auto;
+  max-width: 1200px;
 }
-section .swiper-wrapper {
+
+section.con5 .swiper-wrapper .swiper-slide {
+  width: auto; /* 유동적 */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.con5 .swiper-slide img {
+  width: 100%;
+  max-width: 150px; /* 슬라이드 이미지 최대 폭 */
+  height: auto;
+  object-fit: contain;
+}
+/* section .swiper-wrapper {
   width: 100%;
   max-width: 93.75rem;
 }
@@ -235,7 +251,7 @@ section .swiper-wrapper .swiper-slide {
 section .swiper-wrapper .swiper-slide img {
   height: 100px;
   object-fit: cover;
-}
+} */
 section#foot {
   height: 400px;
   padding: 0 80px;

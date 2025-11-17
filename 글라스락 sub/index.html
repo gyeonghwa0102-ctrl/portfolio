@@ -10,30 +10,188 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- <script>
+      $(function () {
+        // ---- 풀페이지 JS ----
+        const $sections = $("section"); // section만 풀페이지
+        let current = 0;
+        let isMoving = false;
+        const speed = 800;
+
+        function moveTo(index) {
+          if (isMoving) return;
+          if (index < 0 || index >= $sections.length) return;
+
+          isMoving = true;
+          current = index;
+
+          const top = $sections.eq(index).offset().top;
+
+          $("html, body").animate({ scrollTop: top }, speed, function () {
+            isMoving = false;
+          });
+        }
+
+        // 마우스휠
+        $(window).on("wheel", function (e) {
+          if (isMoving) return;
+          if (e.originalEvent.deltaY > 0) moveTo(current + 1);
+          else moveTo(current - 1);
+        });
+
+        // 터치 스와이프
+        let startY = 0;
+        $(window).on("touchstart", function (e) {
+          startY = e.originalEvent.touches[0].clientY;
+        });
+        $(window).on("touchend", function (e) {
+          let endY = e.originalEvent.changedTouches[0].clientY;
+          let diff = startY - endY;
+          if (Math.abs(diff) > 40) {
+            if (diff > 0) moveTo(current + 1);
+            else moveTo(current - 1);
+          }
+        });
+
+        // 키보드 이동
+        $(window).on("keydown", function (e) {
+          if (isMoving) return;
+          if (e.key === "ArrowDown" || e.key === "PageDown")
+            moveTo(current + 1);
+          if (e.key === "ArrowUp" || e.key === "PageUp") moveTo(current - 1);
+        });
+
+        // 현재 section 계산
+        function updateCurrent() {
+          const scroll = $(window).scrollTop();
+          $sections.each(function (i) {
+            if ($(this).offset().top <= scroll + 10) current = i;
+          });
+        }
+        $(window).on("scroll", updateCurrent);
+
+        // ---- Swiper 초기화 ----
+        const swiper = new Swiper(".mySwiper", {
+          centeredSlides: true,
+          slidesPerView: 5,
+          breakpoints: {
+            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 2 },
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          freeMode: true,
+          pagination: { el: ".swiper-pagination", clickable: true },
+        });
+
+        // ---- mall_btn 스크롤 이벤트 ----
+        $(window).on("scroll", function () {
+          let ht = $(this).scrollTop();
+          if (ht >= 5095) $("#mall_btn").addClass("on");
+          else $("#mall_btn").removeClass("on");
+        });
+      });
+    </script> -->
+
     <script>
-      // $(function () {
-      //   $("section").each(function (k) {
-      //     $(this).on("wheel", function () {
-      //       console.log(event.wheelDelta);
-      //       let ht = $(window).scrollTop();
-      //       let current = $("section").eq(k);
-      //       if (event.wheelDelta < 0) {
-      //         if ($(current).next() != undefined) {
-      //           try {
-      //             ht = $(current).next().offset().top;
-      //           } catch (error) {}
-      //         }
-      //       } else {
-      //         if ($(current).prev() != undefined) {
-      //           try {
-      //             ht = $(current).prev().offset().top;
-      //           } catch (error) {}
-      //         }
-      //       }
-      //       $("html,body").stop().animate({ scrollTop: ht }, 500);
-      //     });
-      //   });
-      // });
+      $(function () {
+        const $sections = $("section"); // section만 풀페이지
+        let current = 0;
+        let isMoving = false;
+        const speed = 800;
+
+        function moveTo(index) {
+          if (isMoving) return;
+          if (index < 0 || index >= $sections.length) return;
+
+          isMoving = true;
+          current = index;
+
+          const top = $sections.eq(index).offset().top;
+
+          $("html, body").animate({ scrollTop: top }, speed, function () {
+            isMoving = false;
+          });
+        }
+
+        // 마우스휠
+        $(window).on("wheel", function (e) {
+          if (isMoving) return;
+
+          if (e.originalEvent.deltaY > 0) {
+            moveTo(current + 1);
+          } else {
+            moveTo(current - 1);
+          }
+        });
+
+        // 터치 스와이프
+        let startY = 0;
+
+        $(window).on("touchstart", function (e) {
+          startY = e.originalEvent.touches[0].clientY;
+        });
+
+        $(window).on("touchend", function (e) {
+          let endY = e.originalEvent.changedTouches[0].clientY;
+          let diff = startY - endY;
+
+          if (Math.abs(diff) > 40) {
+            if (diff > 0) moveTo(current + 1);
+            else moveTo(current - 1);
+          }
+        });
+
+        // 키보드 이동
+        $(window).on("keydown", function (e) {
+          if (isMoving) return;
+
+          if (e.key === "ArrowDown" || e.key === "PageDown") {
+            moveTo(current + 1);
+          }
+          if (e.key === "ArrowUp" || e.key === "PageUp") {
+            moveTo(current - 1);
+          }
+        });
+
+        // 처음 로드시 현재 section 계산
+        function updateCurrent() {
+          const scroll = $(window).scrollTop();
+          $sections.each(function (i) {
+            if ($(this).offset().top <= scroll + 10) {
+              current = i;
+            }
+          });
+        }
+
+        $(window).on("scroll", function () {
+          updateCurrent();
+        });
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        breakpoints: {
+          1024: { slidesPerView: 3 },
+          768: { slidesPerView: 2 },
+        },
+        loop: true,
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        freeMode: true,
+        pagination: { el: ".swiper-pagination", clickable: true },
+      });
+
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        console.log(ht);
+        if (ht >= 5095) {
+          document.querySelector("#mall_btn").classList.add("on");
+        } else {
+          document.querySelector("#mall_btn").classList.remove("on");
+        }
+      };
     </script>
   </head>
   <body>
@@ -70,7 +228,7 @@
           </p>
         </div>
       </nav>
-      <h1>INNOVATION</h1>
+      <h2>INNOVATION</h2>
     </section>
     <div id="mall_btn">
       <ul>
@@ -209,40 +367,11 @@
             <img src="./img/ico_smartstore.svg" alt="" />
           </li>
           <li>
-            <a href="">Family Site <span>+</span></a>
+            <a href="#">Family Site <span>+</span></a>
           </li>
         </ul>
         <p>COPYRIGHTS ⓒ 2024 SGC SOLUTIONS CO.,LTD. ALL RIGHTS RESERVED.</p>
       </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 5,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        freeMode: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-    <script>
-      window.onscroll = function () {
-        let ht = document.documentElement.scrollTop;
-        console.log(ht);
-        if (ht >= 5095) {
-          document.querySelector("#mall_btn").classList.add("on");
-        } else {
-          document.querySelector("#mall_btn").classList.remove("on");
-        }
-      };
-    </script>
   </body>
 </html>
