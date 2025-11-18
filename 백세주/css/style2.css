@@ -1,5 +1,4 @@
 @charset "utf-8";
-/*후버기능, 글자 배열*/
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,7 @@ a {
   text-decoration: none;
   color: #333;
 }
-/* 기본 스타일 (데스크톱) */
+
 section#maintop {
   height: 100vh;
   position: sticky;
@@ -22,8 +21,8 @@ section#maintop {
 .top {
   max-width: 1745px;
   width: 100%;
-  position: relative;
   margin: 0 auto;
+  position: relative;
 }
 
 .top ul {
@@ -40,7 +39,7 @@ section#maintop {
 
 .top p img {
   display: block;
-  width: 13.8681948%;
+  width: 219px;
   margin: 0 auto;
 }
 
@@ -48,7 +47,7 @@ section#maintop {
   border-left: 1px solid gray;
   border-right: 1px solid gray;
   position: absolute;
-  left: 4.58452722%;
+  left: 3.5%;
 }
 
 .img {
@@ -57,13 +56,15 @@ section#maintop {
 }
 
 .img p:nth-child(1) img {
-  width: 1745px;
-  height: 530px;
-  margin: 100px auto;
+  width: 100%;
+  max-width: 1745px;
+  height: auto;
   object-fit: cover;
+  display: block;
+  margin: 100px auto;
 }
 
-.img p:nth-child(2) img {
+.img .bottle img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -119,7 +120,7 @@ section#maintop {
   }
 }
 
-/* 반응형 : 모바일 (768px 이하) */
+/* 반응형 : 모바일 (768px 이하)
 @media screen and (max-width: 768px) {
   .top ul {
     flex-direction: column;
@@ -154,8 +155,7 @@ section#maintop {
   .scroll h6 {
     font-size: 10px;
     padding-bottom: 30px;
-  }
-}
+} }*/
 
 main {
   position: relative;
@@ -245,17 +245,21 @@ main section div::after {
   background-image: url(https://www.bekseju.com/images/ph.png);
   z-index: 2;
 }
-.bphoto {
-  position: relative;
-  top: -60px;
-  z-index: 3;
-}
 footer {
   position: relative;
   bottom: 0;
   background-color: #242902;
   padding: 0 0 50px;
 }
+footer .bphoto {
+  position: relative;
+  top: -20px;
+  z-index: 3;
+}
+footer .bphoto img {
+  width: 100%;
+}
+
 footer .bot {
   font-family: "Pretendard";
   font-size: 15px;

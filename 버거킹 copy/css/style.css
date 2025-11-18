@@ -315,6 +315,23 @@ main .first img {
   object-fit: cover;
   border-radius: 1.25rem;
 }
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255);
+}
+.swiper-pagination-bullet-active {
+  background: var(--swiper-pagination-bullet-inactive-color, #502314);
+}
+.swiper .swiper-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 8px !important;
+  border-radius: 8px;
+}
+.swiper
+  .swiper-pagination.swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  width: 24px;
+}
 
 main .right .sec {
   width: 31.25rem;
@@ -939,6 +956,11 @@ footer .fbottom .right .sns img {
     width: 21.875rem;
   }
 }
+@media screen and (max-width: 1056px) {
+  .bottom {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   body {
     background-color: #fffcf8;
@@ -1003,7 +1025,8 @@ footer .fbottom .right .sns img {
   .deli .txt .def {
     font-size: 15px;
   }
-  .bottom .app h2 {
+
+  /* .bottom .app h2 {
     font-size: 20px;
     margin-bottom: 10px;
   }
@@ -1024,7 +1047,7 @@ footer .fbottom .right .sns img {
   }
   .bottom .app .down li > p:last-child {
     margin-top: 5px;
-  }
+  } */
   footer .use {
     padding-left: 0;
   }

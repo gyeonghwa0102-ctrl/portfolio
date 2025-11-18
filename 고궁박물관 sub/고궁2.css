@@ -150,6 +150,7 @@ section.visual nav .right .hambuger label span {
   z-index: 999;
 }
 .con {
+  display: flex;
   padding: 2vw;
   box-sizing: border-box;
   font-family: "Pretendard";
@@ -254,4 +255,35 @@ section.visual nav .right .hambuger label span {
       rgba(155, 155, 155, 0.4) 100%
     )
     1;
+}
+.con .map {
+  margin-top: 40px;
+  padding: 0 28px;
+}
+.map {
+  width: 100%;
+  max-width: 1145px;
+  position: relative;
+}
+.map img {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.map ul li a {
+  color: #000;
+  font-size: 17px;
+  font-family: "Pretendard";
+}
+.map ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  aspect-ratio: 1;
+  background: #61616133;
+  border-radius: 50%;
+  transform: translate((-50%, -50%));
 }

@@ -11,49 +11,59 @@ a {
   text-decoration: none;
   color: #333;
 }
+
 section#maintop {
   height: 100vh;
   position: sticky;
   top: 0;
   background-color: #fefef2;
 }
+
 .top {
   max-width: 1745px;
   width: 100%;
   position: relative;
   margin: 0 auto;
 }
+
 .top ul {
   display: flex;
   justify-content: space-between;
   padding: 30px 0;
 }
+
 .top ul li {
   margin: 0 40px;
   font-family: "Pretendard";
   font-size: 15px;
 }
+
 .top p img {
   display: block;
-  width: 13.8681948%;
+  width: 219px;
   margin: 0 auto;
 }
+
 .v-line {
   border-left: 1px solid gray;
   border-right: 1px solid gray;
   position: absolute;
   left: 4.58452722%;
 }
+
 .img {
   text-align: center;
   position: relative;
+  width: 100%;
 }
+
 .img p:nth-child(1) img {
   width: 1745px;
   height: 530px;
   margin: 100px auto;
   object-fit: cover;
 }
+
 .img p:nth-child(2) img {
   position: absolute;
   top: 50%;
@@ -62,12 +72,14 @@ section#maintop {
   width: 167px;
   height: 589px;
 }
+
 .scroll {
   background-image: url(https://www.bekseju.com/images/ico-arrow-d.svg);
   background-repeat: no-repeat;
   background-size: 24px;
   background-position: center;
 }
+
 .scroll h6 {
   text-transform: uppercase;
   text-align: center;

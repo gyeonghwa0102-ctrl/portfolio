@@ -221,7 +221,7 @@ section.con5 {
 section.con5 p {
   margin-bottom: 50px;
 }
-section .mySwiper {
+/* section .mySwiper {
   margin: 0 200px;
 }
 section .swiper-wrapper {
@@ -235,8 +235,8 @@ section .swiper-wrapper .swiper-slide {
 section .swiper-wrapper .swiper-slide img {
   height: 100px;
   object-fit: cover;
-}
-section#foot {
+} */
+section#section6 {
   height: 400px;
   padding: 0 80px;
   box-sizing: border-box;
@@ -246,31 +246,31 @@ section#foot {
   align-items: center;
   font-family: "Pretendard";
 }
-section#foot .left {
+section#section6 .left {
   text-align: left;
 }
-section#foot .left .logo > a > img {
+section#section6 .left .logo > a > img {
   width: 9.375rem;
 }
-section#foot .left ul {
+section#section6 .left ul {
   margin-top: 0.625rem;
 }
-section#foot .left ul li {
+section#section6 .left ul li {
   font-size: 1em;
   line-height: 1.5rem;
 }
-section#foot .left ul li span {
+section#section6 .left ul li span {
   font-weight: bold;
 }
-section#foot .right .sns {
+section#section6 .right .sns {
   display: flex;
   justify-content: flex-end;
   gap: 0.625rem;
 }
-section#foot .right .sns > li > a {
+section#section6 .right .sns > li > a {
   display: inline-block;
 }
-section#foot .right .sns > li > img {
+section#section6 .right .sns > li > img {
   width: 1.563rem;
   height: 1.563rem;
   cursor: pointer;
@@ -280,7 +280,7 @@ section#foot .right .sns > li > img {
   padding: 5px 5px;
   color: #333;
 }
-section#foot .right p {
+section#section6 .right p {
   font-size: 0.7em;
   margin-top: 10px;
   padding-bottom: 5px;
@@ -293,7 +293,7 @@ section#foot .right p {
     padding: 200px 2.5rem 0;
     margin: 0;
   }
-  section#foot {
+  section#section6t {
     padding: 0 2.5rem 0;
     margin: 0;
   }
@@ -357,11 +357,11 @@ section#foot .right p {
   section .con .swiper-slide img {
     height: 60px;
   }
-  section#foot {
+  section#section6 {
     flex-wrap: wrap;
     position: relative;
   }
-  section#foot .right .sns {
+  section#section6 .right .sns {
     position: absolute;
     left: 6%;
     top: 65%;

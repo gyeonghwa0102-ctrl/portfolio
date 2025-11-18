@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="./고궁2.css" />
     <title>국립고궁박물관</title>
   </head>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="
+  <script src="jquery-ui.min.js"></script>
+  <script>
+    $(".map").click(function () {
+      $(".hide").slideToggle(1000);
+    });
+  </script>
   <body>
     <input type="checkbox" name="menu" id="menu" />
     <div id="fullmenu">
@@ -89,19 +97,21 @@
                     alt=""
                 /></span>
               </div>
-              <p>
-                2층에는 조선 왕조의 상징물과 기록물 위주로 전시된 <br />
-                ‘조선국왕’실과 왕실 가족들의 생활 모습을 감상할 수 있는
-                <br />‘왕실생활’실이 있습니다.
-              </p>
-              <ul>
-                <li>
-                  <a href="#">조선국왕 <br />VR보기</a>
-                </li>
-                <li>
-                  <a href="#">왕실생활 <br />VR보기</a>
-                </li>
-              </ul>
+              <div class="hide">
+                <p>
+                  2층에는 조선 왕조의 상징물과 기록물 위주로 전시된 <br />
+                  ‘조선국왕’실과 왕실 가족들의 생활 모습을 감상할 수 있는
+                  <br />‘왕실생활’실이 있습니다.
+                </p>
+                <ul>
+                  <li>
+                    <a href="#">조선국왕 <br />VR보기</a>
+                  </li>
+                  <li>
+                    <a href="#">왕실생활 <br />VR보기</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <hr />
             <div class="onefloor">
@@ -114,19 +124,21 @@
                     alt=""
                 /></span>
               </div>
-              <p>
-                1층에는 황제국의 선포와 근대 국가로의 전환을 살펴볼 수 있는
-                ‘대한제국’실이 있으며, 전시실 로비에서는 순종 황제와 황후가 타던
-                자동차 [어차]를 감상하실 수 있습니다.
-              </p>
-              <ul>
-                <li>
-                  <a href="#">대한제국 <br />VR보기</a>
-                </li>
-                <li>
-                  <a href="#">어차 <br />VR보기</a>
-                </li>
-              </ul>
+              <div class="hide">
+                <p>
+                  1층에는 황제국의 선포와 근대 국가로의 전환을 살펴볼 수 있는
+                  ‘대한제국’실이 있으며, 전시실 로비에서는 순종 황제와 황후가
+                  타던 자동차 [어차]를 감상하실 수 있습니다.
+                </p>
+                <ul>
+                  <li>
+                    <a href="#">대한제국 <br />VR보기</a>
+                  </li>
+                  <li>
+                    <a href="#">어차 <br />VR보기</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <hr />
             <div class="lastfloor">
@@ -139,24 +151,54 @@
                     alt=""
                 /></span>
               </div>
-              <p>
-                지하에는 조선 왕실의 예술을 감상할 수 있는 ‘궁중서화’실, 왕실의
-                의례를 살펴볼 수 있는 ‘왕실의례’실 그리고 조선의 수준 높은 과학
-                문화의 역사를 볼 수 있는 ‘과학문화’실이 있습니다.
-              </p>
-              <ul>
-                <li>
-                  <a href="#">궁중서화 <br />VR보기</a>
-                </li>
-                <li>
-                  <a href="#">왕실의례 <br />VR보기</a>
-                </li>
-                <li>
-                  <a href="#">과학문화 <br />VR보기</a>
-                </li>
-              </ul>
+              <div class="hide">
+                <p>
+                  지하에는 조선 왕실의 예술을 감상할 수 있는 ‘궁중서화’실,
+                  왕실의 의례를 살펴볼 수 있는 ‘왕실의례’실 그리고 조선의 수준
+                  높은 과학 문화의 역사를 볼 수 있는 ‘과학문화’실이 있습니다.
+                </p>
+                <ul>
+                  <li>
+                    <a href="#">궁중서화 <br />VR보기</a>
+                  </li>
+                  <li>
+                    <a href="#">왕실의례 <br />VR보기</a>
+                  </li>
+                  <li>
+                    <a href="#">과학문화 <br />VR보기</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <hr />
+          </div>
+        </div>
+        <div class="map">
+          <div class="2fr">
+            <img
+              src="https://online.gogung.go.kr/html/onlinemuseum/resources/images/sub/permanent/map_2f.svg"
+              alt=""
+            />
+            <ul>
+              <li>
+                <a href="#"><span>왕실생활</span></a>
+              </li>
+              <li>
+                <a href="#"><span>조선국왕</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="1fr">
+            <!-- <img
+              src="https://online.gogung.go.kr/html/onlinemuseum/resources/images/sub/permanent/map_1f.svg"
+              alt=""
+            /> -->
+          </div>
+          <div class="b1fr">
+            <!-- <img
+              src="https://online.gogung.go.kr/html/onlinemuseum/resources/images/sub/permanent/map_B1f.svg"
+              alt=""
+            /> -->
           </div>
         </div>
       </div>

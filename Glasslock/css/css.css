@@ -187,6 +187,7 @@ section.visual .swiper-slide > img {
   filter: brightness(0.8);
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
 }
 section.visual .swiper-slide .txt {
   position: absolute;
@@ -200,12 +201,15 @@ section.visual .swiper-slide .txt p > img {
   filter: brightness(0) invert(1);
 }
 section.visual .swiper-slide .txt h1 {
+  white-space: nowrap;
   font-size: 2.2em;
   font-weight: 200;
   margin-top: 50px;
   color: #fff;
 }
-
+section.visual .swiper-slide .txt .mo {
+  display: none;
+}
 section.visual .swiper-slide:nth-child(2) .txt h1 {
   margin-top: 0;
 }
@@ -277,5 +281,8 @@ section.visual .swiper-slide:nth-child(5) .txt img {
   section.visual .swiper-slide .txt h1 {
     font-size: 35px;
     margin-top: 10%;
+  }
+  section.visual .swiper-slide .txt .mo {
+    display: block;
   }
 }
