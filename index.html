@@ -5,243 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./img/logo.png" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>HWA</title>
-    <style>
-      @font-face {
-        font-family: "spinwerad";
-        src: url("./font/spinwerad.woff");
-      }
-      @font-face {
-        font-family: "SUIT";
-        src: url("./font/SUIT-Regular.woff2");
-      }
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      a {
-        text-decoration: none;
-        color: #333;
-      }
-      ul {
-        list-style: none;
-      }
-      body {
-        background-color: #f5f1f0;
-      }
-      .nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px 50px;
-        font-family: "Pretendard";
-        text-transform: uppercase;
-        position: static;
-      }
-      .nav .logo img {
-        width: 50px;
-      }
-      .nav .menu {
-        display: flex;
-        gap: 50px;
-      }
-      .nav .menu li a {
-        font-size: 20px;
-      }
-      .nav .menu li:hover a {
-        color: #7da4e7;
-      }
-      h1 {
-        font-family: "spinwerad";
-        font-size: 120px;
-        text-align: center;
-        margin-top: 150px;
-        padding-left: 50px;
-      }
-      .down {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 50px;
-        margin-top: 320px;
-        font-size: 15px;
-        font-family: "Pretendard";
-      }
-      .down li img {
-        width: 150px;
-      }
-      #section {
-        margin-top: 100px;
-      }
-      #section2 h2 {
-        font-family: "spinwerad";
-        font-size: 60px;
-        text-align: left;
-        padding-left: 50px;
-      }
-      #section2 .intro {
-        width: 95%;
-        max-width: 1280px;
-        margin: 0 auto;
-        display: flex;
-        font-family: "Pretendard";
-      }
-      .intro > div:first-child {
-        position: sticky;
-        width: 580px;
-        padding-top: 100px;
-        top: 0;
-        height: 100%;
-      }
-      .intro > div:first-child img {
-        margin-bottom: 50px;
-      }
-      .intro > div:first-child .name {
-        display: flex;
-        gap: 20px;
-      }
-      .intro > div:first-child .birth {
-        display: flex;
-        gap: 30px;
-      }
-      .intro > div:first-child span {
-        font-size: 18px;
-        font-weight: 300;
-        color: #333;
-      }
-      .intro > div:first-child ul {
-        margin-top: 100px;
-        display: flex;
-        gap: 30px;
-        font-size: 20px;
-      }
-      .intro > div:first-child ul li {
-        border: 1px solid;
-        border-radius: 10px;
-        padding: 5px 10px;
-        color: #000;
-      }
-      .intro > div:nth-child(2) {
-        flex: 1;
-      }
-      .intro > div:nth-child(2) .item {
-        display: flex;
-        gap: 100px;
-        padding-top: 100px;
-      }
-      .intro > div:nth-child(2) .item h3 {
-        font-size: 25px;
-        margin: 50px 0;
-      }
-      .intro > div:nth-child(2) .item p {
-        font-size: 18px;
-        line-height: 30px;
-      }
-      .intro > div:nth-child(2) #resume .edu span {
-        font-size: 15px;
-        margin-left: 10px;
-        color: rgba(0, 0, 0, 0.5);
-      }
-      .intro > div:nth-child(2) #about p {
-        line-height: 30px;
-        color: rgba(0, 0, 0, 0.5);
-      }
-      .intro > div:nth-child(2) .item:target > span {
-        color: #7da4e7;
-      }
-      .intro > div:nth-child(2) .skill ul {
-        display: flex;
-        gap: 20px;
-      }
-      .intro > div:nth-child(2) #about h4 {
-        font-size: 20px;
-      }
-      .intro > div:nth-child(2) #about hr {
-        margin: 10px 0;
-      }
-      .intro > div:nth-child(2) #about p {
-        margin-bottom: 50px;
-      }
-      .foot {
-        height: 400px;
-      }
-      #section3 > h2 {
-        font-family: "spinwerad";
-        font-size: 60px;
-        text-align: left;
-        padding-left: 50px;
-      }
-      #section3 .btn {
-        display: flex;
-        gap: 30px;
-        padding-left: 90px;
-      }
-      #section3 .btn li a {
-        font-family: "spinwerad";
-        font-size: 30px;
-      }
-      #section3 .btn:hover {
-        background-color: #000;
-      }
-      #section3 .btn li a:hover {
-        color: #fff;
-      }
-      .project {
-        padding: 100px 0 0 50px;
-        font-family: "Pretendard";
-      }
-      .project > div {
-        margin-bottom: 100px;
-      }
-      .project .text h2 {
-        font-size: 25px;
-        margin-bottom: 20px;
-      }
-      .project .text p {
-        font-size: 18px;
-        line-height: 30px;
-        margin-bottom: 20px;
-        color: rgba(0, 0, 0, 0.5);
-      }
-      .project .text ul {
-        display: flex;
-        justify-content: space-between;
-        font-size: 25px;
-        font-weight: bold;
-      }
-      .project .text ul li img {
-        width: 20px;
-        object-fit: cover;
-      }
-      .project .text hr {
-        margin-top: 10px;
-      }
-      .project > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-      }
-      .project > div img {
-        width: 600px;
-        object-fit: cover;
-      }
-      #section4 > h2 {
-        font-family: "spinwerad";
-        font-size: 60px;
-        text-align: left;
-        padding-left: 50px;
-      }
-      #section4 ul {
-        display: flex;
-      }
-      #section4 ul li img {
-        filter: invert(100%);
-      }
-      #section4 ul li:nth-child(4) img {
-        filter: invert(0);
-      }
-    </style>
   </head>
   <body>
     <div id="fullpage">
@@ -258,7 +23,7 @@
           </ul>
         </div>
         <div data-aos="fade-down" data-aos-delay="1000">
-          <h1>Portfolio</h1>
+          <h1>Gyeonghwa's <br />Portfolio</h1>
         </div>
         <div data-aos="fade-down" data-aos-delay="1500">
           <ul class="down">
@@ -274,7 +39,7 @@
         <hr />
         <div class="intro">
           <div>
-            <p><img src="./img/IMG_9618.JPG" alt="" /></p>
+            <p><img src="./img/IMG_9619.JPG" alt="" /></p>
             <div class="name">
               <span>Name</span>
               <h3>정경화</h3>
@@ -319,6 +84,7 @@
                     <li><img src="./img/CSS3.svg" alt="" /></li>
                     <li><img src="./img/Javascript.svg" alt="" /></li>
                     <li><img src="./img/jQuery.svg" alt="" /></li>
+
                     <li><img src="./img/Figma.svg" alt= /></li>
                     <li><img src="./img/Github.svg" alt="" /></li>
                     <li><img src="./img/Illustrator.svg" alt="" /></li>
@@ -377,13 +143,11 @@
           <li><a href="#">Clone</a></li>
         </ul>
         <hr />
+        <div class="cursor">view more</div>
         <div class="project">
           <div class="museum" data-aos="fade-right">
             <div class="img">
-              <img
-                src="./img/—Pngtree—laptop with apple and monitor_8957770.png"
-                alt=""
-              />
+              <img src="./img/museum.png" alt="" />
             </div>
             <div class="text">
               <h2>국립고궁박물관</h2>
@@ -391,7 +155,7 @@
                 왕실유물을 정보와 전시정보 확인이 가능한 국립고궁박물관 홈페이지
                 반응형 입니다. <br />
                 INPUT, ANIMATION 기능을 활용하여 기존 홈페이지와 유사하게
-                제작하였습니다.
+                제작했습니다.
               </p>
               <h2>Tool</h2>
               <p>HTML CSS</p>
@@ -410,7 +174,7 @@
             <div class="text">
               <h2>글라스락</h2>
               <p>
-                대한민국 1등 유리밀페용기 브랜드 글라스락 홈페이지 반응형입니다.
+                대한민국 1등 유리밀페용기 브랜드 글라스락 반응형입니다.
                 <br />
                 Swiper-slide, jOuery를 활용하여 동적인 작동을 구현했습니다.
               </p>
@@ -427,26 +191,20 @@
               <hr />
             </div>
             <div class="img">
-              <img
-                src="./img/—Pngtree—laptop with apple and monitor_8957770.png"
-                alt=""
-              />
+              <img src="./img/glasslock.png" alt="" />
             </div>
           </div>
-          <div class="museum" data-aos="fade-right">
+          <div class="burgerking" data-aos="fade-right">
             <div class="img">
-              <img
-                src="./img/—Pngtree—laptop with apple and monitor_8957770.png"
-                alt=""
-              />
+              <img src="./img/burgerking.png" alt="" />
             </div>
             <div class="text">
               <h2>버거킹</h2>
               <p>
                 좋은 품질, 친절한 서비스, 청결한 매장을 가치로 둔 버거킹
-                홈페이지의 반응형입니다. <br />
+                반응형입니다. <br />
                 Swiper-slide, grid, Animation 기능을 활용하여 동적인 효과를
-                구현하였습니다.
+                구현했습니다.
                 <br />
                 좋아하는 햄버거 브랜드이기에 즐겁게 제작했습니다.
               </p>
@@ -463,13 +221,13 @@
               <hr />
             </div>
           </div>
-          <div class="Glasslock" data-aos="fade-left">
+          <div class="samdasoo" data-aos="fade-left">
             <div class="text">
               <h2>삼다수</h2>
               <p>
-                제주도 깊은 암반수를 담은 삼다수의 홈페이지 반응형 입니다.
+                제주도 깊은 암반수를 담은 삼다수 반응형 입니다.
                 <br />
-                Fiexd, jQuery를 활용하여 트렌디한 동적효과를 주었습니다. <br />
+                Fiexd, jQuery를 활용하여 트렌디한 동적효과를 줬습니다. <br />
                 현재도 삼다수를 즐겨마시고 있으며 프로젝트를 통하여
                 <br />이전에는 몰랐던 브랜드의 가치를 알 수 있어 흥미로웠습니다.
               </p>
@@ -486,18 +244,12 @@
               <hr />
             </div>
             <div class="img">
-              <img
-                src="./img/—Pngtree—laptop with apple and monitor_8957770.png"
-                alt=""
-              />
+              <img src="./img/samdasoo.png" alt="" />
             </div>
           </div>
-          <div class="museum" data-aos="fade-right">
+          <div class="spc" data-aos="fade-right">
             <div class="img">
-              <img
-                src="./img/—Pngtree—laptop with apple and monitor_8957770.png"
-                alt=""
-              />
+              <img src="./img/spc.png" alt="" />
             </div>
             <div class="text">
               <h2>SPC</h2>
@@ -526,26 +278,51 @@
         <hr />
         <h2>· Contact</h2>
         <hr />
-        <h1>감사합니다</h1>
-        <hr />
-        <ul>
-          <li>Contect</li>
-          <li><img src="./img/phone.png" alt="" /></li>
-          <li><img src="./img/email.png" alt="" /></li>
-          <li><img src="./img/Github.svg" alt="" /></li>
-        </ul>
-        <hr />
-        <p>© 2025 HWA All Rights Reserved.</p>
+        <h1>감사합니다.</h1>
+        <div>
+          <hr />
+          <ul>
+            <li><img src="./img/phone.png" alt="" /></li>
+            <li><img src="./img/email.png" alt="" /></li>
+            <li><img src="./img/Github.svg" alt="" /></li>
+          </ul>
+          <hr />
+        </div>
+        <p>© Copyright HWA All Rights Reserved.</p>
       </section>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script>
       AOS.init({
         //offset:120
         delay: 500,
         easing: "ease",
         duration: 1000,
+      });
+      let cursor = document.querySelector(".cursor");
+      document.onmousemove = function (e) {
+        cursor.style.top = e.clientY + "px";
+        cursor.style.left = e.clientX + "px";
+      };
+      document.querySelectorAll("#section3 img").forEach(function (v) {
+        v.onmouseenter = function () {
+          cursor.style.display = "block";
+        };
+        v.onmouseleave = function () {
+          cursor.style.display = "none";
+        };
+      });
+      $(".intro ul li:nth-child(1)").click(function () {
+        $(".intro ul li:nth-child(1) a").css({ color: "#267575" });
+        $(".intro ul li:nth-child(2) a").css({
+          color: "#000",
+        });
+      });
+      $(".intro ul li:nth-child(2)").click(function () {
+        $(".intro ul li:nth-child(2) a").css({ color: "#267575" });
+        $(".intro ul li:nth-child(1) a").css({ color: "#000" });
       });
     </script>
   </body>
