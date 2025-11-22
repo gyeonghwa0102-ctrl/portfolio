@@ -7,6 +7,10 @@
   font-family: "SUIT";
   src: url("../font/SUIT-Regular.woff2");
 }
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../font/PlayfairDisplay-Regular.woff");
+}
 * {
   margin: 0;
   padding: 0;
@@ -20,12 +24,14 @@ ul {
 }
 body {
   background-color: #f5f1f0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
 }
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 50px;
+  box-sizing: border-box;
   font-family: "Pretendard";
   text-transform: uppercase;
   position: static;
@@ -49,15 +55,88 @@ body {
   font-size: 20px;
 }
 .nav .menu li:hover a {
-  color: #267575;
-}
-h1 {
-  font-family: "spinwerad";
-  font-size: 120px;
-  text-align: center;
-  margin-top: 200px;
-  padding-left: 50px;
   color: #6b4e45;
+}
+.nav .menu li:last-child a {
+  border: 1px solid #6b4e45;
+  color: #6b4e45;
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+.nav .menu li:last-child:hover a {
+  background-color: #6b4e45;
+  color: #fff;
+}
+#section1 {
+  height: 900px;
+  position: relative;
+}
+#section1 .main {
+  margin-top: 100px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  /* font-family: "Pretendard"; */
+  font-family: "PlayfairDisplay";
+}
+/* #section1 .main .txt > li:first-child {
+  padding-left: 10%;
+  font-size: 80px;
+} */
+#section1 .main .txt > li:first-child {
+  font-size: 30px;
+  text-align: center;
+}
+#section1 .main .txt > li:nth-child(2) {
+  font-family: "spinwerad";
+
+  font-size: 100px;
+  /* color: #6b4e45; */
+  text-align: center;
+}
+#section1 .main .txt > li:nth-child(3) {
+  font-size: 100px;
+  /* font-weight: 100; */
+  text-align: center;
+}
+#section1 .main ul li:nth-child(4) {
+  text-align: center;
+  font-size: 50px;
+  color: #6b4e45;
+}
+#section1 .main li {
+  font-size: 20px;
+}
+#section1 .main .bt {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 100px;
+}
+#section1 .main .bt li a {
+  border: 1px solid #6b4e45;
+  color: #6b4e45;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-family: "Pretendard";
+  text-align: right;
+  /* position: absolute;
+  top: 150%;
+  left: 40%; */
+}
+#section1 .main .bt li:first-child a {
+  color: #fff;
+  background: #000;
+}
+#section1 .main .bt li:hover a {
+  color: #fff;
+  background: #6b4e45;
+}
+#section1 .main p {
+  margin-top: 100px;
+  text-align: center;
+  font-family: "Pretendard";
+  color: #ccc;
 }
 .down {
   display: flex;
@@ -123,11 +202,10 @@ h1 {
   gap: 30px;
   font-size: 20px;
 }
-.intro > div:first-child ul li {
+.intro > div:first-child ul li a {
   border: 1px solid;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 5px 10px;
-  color: #000;
 }
 .intro > div:nth-child(2) {
   flex: 1;
@@ -140,6 +218,7 @@ h1 {
 .intro > div:nth-child(2) .item h3 {
   font-size: 25px;
   margin: 50px 0;
+  color: #6b4e45;
 }
 .intro > div:nth-child(2) .item p {
   font-size: 18px;
@@ -158,7 +237,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 .intro > div:nth-child(2) .item:target > span {
-  color: #267575;
+  color: #6b4e45;
 }
 .intro > div:nth-child(2) .skill ul {
   display: flex;
@@ -267,13 +346,13 @@ h1 {
   gap: 100px;
   margin-bottom: 200px;
 }
-#section4 > h2 {
+/* #section4 > h2 {
   font-family: "spinwerad";
   font-size: 60px;
   text-align: left;
   padding-left: 50px;
-}
-#section4 ul {
+} */
+/* #section4 ul {
   display: flex;
   justify-content: space-around;
 }
@@ -293,6 +372,86 @@ h1 {
   font-family: "Pretendard";
   font-size: 15px;
   text-align: center;
+} */
+#section4 {
+  text-align: center;
+}
+#section4 .index {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+#section4 .index li h2 {
+  font-family: "spinwerad";
+  font-size: 60px;
+  color: #000;
+}
+#section4 .index li {
+  font-family: "PlayfairDisplay";
+  font-size: 30px;
+  color: #6b4e45;
+}
+#section4 .con {
+  margin-top: 100px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+#section4 .con p {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #6b4e45;
+  font-family: "PlayfairDisplay";
+}
+#section4 .con h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-family: "spinwerad";
+}
+#section4 .con h1 {
+  font-size: 140px;
+  font-family: "PlayfairDisplay";
+  font-weight: inherit;
+  margin-bottom: 30px;
+}
+#section4 .sns {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+#section4 .sns li a:hover {
+  color: #6b4e45;
+}
+#section4 .bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  color: #aaa;
+  font-size: 14px;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+#section4 .bot li a {
+  border: 1px solid;
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+#section4 .bot li a:hover {
+  color: #fff;
+  background-color: #6b4e45;
+}
+#section4 .bot li img {
+  margin-right: 220px;
+  width: 50px;
+  animation: turn 3s infinite;
 }
 @media screen and (max-width: 1500px) {
   .project > div {
