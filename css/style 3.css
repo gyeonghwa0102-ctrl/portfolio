@@ -255,57 +255,186 @@ body {
 .foot {
   height: 400px;
 } */
+h2 {
+  font-family: "spinwerad";
+  font-size: 60px;
+  text-align: left;
+  padding-left: 50px;
+}
+#section2 {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+#section2 .imge {
+  margin-top: 100px;
+  position: relative;
+}
+#section2 .imge .me img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+#section2 .imge .me img:hover {
+  filter: grayscale(0);
+}
+#section2 .imge .hwa {
+  width: 32px;
+  height: 32px;
+  background-color: #000;
+  border-radius: 100%;
+  position: absolute;
+  left: 55%;
+  top: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section2 .imge .hwa > img {
+  filter: brightness(0) invert(1);
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  animation: turn 3s infinite;
+}
+#section2 .tit {
+  margin: 10px 0 50px 0;
+}
+#section2 .tit li:first-child {
+  margin: 30px;
+  font-size: 20px;
+}
+#section2 .tit li:last-child {
+  font-family: "Pretendard";
+  font-size: 18px;
+}
+#section2 .tit li:last-child b {
+  color: #6b4e45;
+}
+#section2 .info {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+  text-align: left;
+}
+#section2 .info li h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+#section2 .info li p {
+  font-size: 18px;
+}
+#section2 .info li p > span {
+  color: #6b4e45;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-right: 10px;
+}
+#section2 .info li:first-child {
+  margin-bottom: 50px;
+}
+#section2 .info li p:last-child > span {
+  margin-right: 5px;
+}
+
+#section2 .info h4 {
+  margin-top: 20px;
+}
+#section2 .info .tool div {
+  display: flex;
+  gap: 30px;
+}
+#section2 .info .tool div p {
+  font-size: 16px;
+  color: #1a1a1a;
+}
+#section2 .info li > .cha p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#section2 .info li > .cha p > span {
+  font-size: 12px;
+  font-weight: lighter;
+  border: 1px solid #6b4e45;
+  border-radius: 30px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+#section2 .info li > .cha > div h5 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+#section2 .info li > .cha > div {
+  margin-bottom: 30px;
+}
+#section2 .edu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+#section2 .edu .obj {
+  margin-bottom: 10px;
+}
+#section2 .edu .obj li:first-child {
+  font-size: 45px;
+  font-weight: bold;
+}
+#section2 .edu .obj li:nth-child(2) {
+  color: #6b4e45;
+}
+#section2 .edu .cont {
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+#section2 .edu .cont li:first-child > span {
+  color: #6b4e45;
+}
 #section3 > h2 {
   font-family: "spinwerad";
   font-size: 60px;
   text-align: left;
   padding-left: 50px;
 }
-#section3 .btn {
+#section3 ul {
   display: flex;
-  gap: 30px;
-  padding-left: 90px;
+  justify-content: space-around;
+  align-items: center;
 }
-#section3 .btn li a {
-  font-family: "spinwerad";
-  font-size: 30px;
+#section3 ul li:first-child {
+  font-size: 72px;
+  font-family: "PlayfairDisplay";
 }
-#section3 .btn:hover {
-  background-color: #000;
+#section3 ul li:first-child span {
+  color: #6b4e45;
 }
-#section3 .btn li a:hover {
-  color: #fff;
+#section3 ul li:last-child {
+  color: #aaa;
 }
-.cursor {
-  display: none;
-  position: fixed;
-  font-family: "Pretendard";
-  z-index: 1000;
-  left: -150px;
-  top: -150px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  line-height: 100px;
-  color: #fff;
-  animation: move 2s infinite;
+.project h2 {
+  font-size: 36px;
 }
-@keyframes move {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.5);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-  }
+.project .museum .in {
+  display: flex;
 }
-.project {
+.project .museum .in .text h3::before {
+  content: "|";
+  position: absolute;
+  left: -10px;
+}
+.project .museum .in .text h3 {
+  font-size: 18px;
+  position: relative;
+}
+/* .project {
   padding: 100px 0 0 0;
   font-family: "Pretendard";
 }
@@ -345,7 +474,7 @@ body {
   align-items: center;
   gap: 100px;
   margin-bottom: 200px;
-}
+} */
 /* #section4 > h2 {
   font-family: "spinwerad";
   font-size: 60px;
