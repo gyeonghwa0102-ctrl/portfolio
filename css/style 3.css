@@ -161,7 +161,7 @@ body {
   text-align: left;
   padding-left: 50px;
 }
-#section2 .intro {
+/* #section2 .intro {
   width: 95%;
   max-width: 1280px;
   margin: 0 auto;
@@ -254,7 +254,7 @@ body {
 }
 .foot {
   height: 400px;
-}
+} */
 #section3 > h2 {
   font-family: "spinwerad";
   font-size: 60px;
