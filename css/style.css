@@ -52,11 +52,12 @@ body {
   color: #267575;
 }
 h1 {
-  font-family: " spinwerad";
+  font-family: "spinwerad";
   font-size: 120px;
   text-align: center;
   margin-top: 200px;
   padding-left: 50px;
+  color: #6b4e45;
 }
 .down {
   display: flex;
