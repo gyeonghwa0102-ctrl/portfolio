@@ -379,7 +379,7 @@ main .sec .coupon {
   align-items: center;
   gap: 5%;
   margin-top: 8%;
-  background-image: url("../img/btn_apple_down.svg");
+  background-image: url("../img/bg_home_appdown.svg");
   background-position: right;
   background-repeat: no-repeat;
 }
