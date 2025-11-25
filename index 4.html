@@ -255,15 +255,15 @@
               <span><i>Projects.</i></span>
             </li>
             <li>
-              웹퍼블리셔 · 웹퍼블리셔의 시선으로 프로젝트 제작에 임했습니다.
+              웹퍼블리셔 · 웹디자이너의 시선으로 프로젝트 제작에 임했습니다.
             </li>
           </ul>
           <div class="project">
             <div class="museum">
-              <h2><span>01.</span> 국립고궁박물관</h2>
+              <h2><span id="fir">01.</span> 국립고궁박물관</h2>
               <hr />
               <div class="in">
-                <div class="img">
+                <div class="img" id="img1">
                   <img src="./img/museum.png" alt="" />
                 </div>
                 <div class="text">
@@ -295,10 +295,10 @@
               </div>
             </div>
             <div class="museum">
-              <h2><span>02.</span> 글라스락</h2>
+              <h2><span id="sec">02.</span> 글라스락</h2>
               <hr />
               <div class="in">
-                <div class="img">
+                <div class="img" id="img2">
                   <img src="./img/glasslock.png" alt="" />
                 </div>
                 <div class="text">
@@ -334,10 +334,10 @@
               </div>
             </div>
             <div class="museum">
-              <h2><span>03.</span> 버거킹</h2>
+              <h2><span id="trd">03.</span> 버거킹</h2>
               <hr />
               <div class="in">
-                <div class="img">
+                <div class="img" id="img3">
                   <img src="./img/burgerking.png" alt="" />
                 </div>
                 <div class="text">
@@ -371,10 +371,10 @@
               </div>
             </div>
             <div class="museum">
-              <h2><span>04.</span> 삼다수</h2>
+              <h2><span id="for">04.</span> 삼다수</h2>
               <hr />
               <div class="in">
-                <div class="img">
+                <div class="img" id="img4">
                   <img src="./img/samdasoo.png" alt="" />
                 </div>
                 <div class="text">
@@ -407,10 +407,10 @@
               </div>
             </div>
             <div class="museum">
-              <h2><span>05.</span> SPC</h2>
+              <h2><span id="fiv">05.</span> SPC</h2>
               <hr />
               <div class="in">
-                <div class="img">
+                <div class="img" id="img5">
                   <img src="./img/spc.png" alt="" />
                 </div>
                 <div class="text">
@@ -511,6 +511,117 @@
           background: "none",
         });
       });
+      $(".project .museum .in #img1").mouseenter(function () {
+        $(".project .museum h2 #fir").css({ color: "#6b4e45" });
+        $(".project .museum .in #img1 img").css({ filter: "grayscale(0)" });
+      });
+
+      $(".project .museum .in #img1").mouseleave(function () {
+        $(".project .museum h2 #fir").css({ color: "#aaa" });
+        $(".project .museum .in #img1 img").css({ filter: "grayscale(1)" });
+      });
+
+      $(".project .museum .in #img2").mouseenter(function () {
+        $(".project .museum h2 #sec").css({ color: "#6b4e45" });
+        $(".project .museum .in #img2 img").css({ filter: "grayscale(0)" });
+      });
+
+      $(".project .museum .in #img2").mouseleave(function () {
+        $(".project .museum h2 #sec").css({ color: "#aaa" });
+        $(".project .museum .in #img2 img").css({ filter: "grayscale(1)" });
+      });
+
+      $(".project .museum .in #img3").mouseenter(function () {
+        $(".project .museum h2 #trd").css({ color: "#6b4e45" });
+        $(".project .museum .in #img3 img").css({ filter: "grayscale(0)" });
+      });
+
+      $(".project .museum .in #img3").mouseleave(function () {
+        $(".project .museum h2 #trd").css({ color: "#aaa" });
+        $(".project .museum .in #img3 img").css({ filter: "grayscale(1)" });
+      });
+
+      $(".project .museum .in #img4").mouseenter(function () {
+        $(".project .museum h2 #for").css({ color: "#6b4e45" });
+        $(".project .museum .in #img4 img").css({ filter: "grayscale(0)" });
+      });
+
+      $(".project .museum .in #img4").mouseleave(function () {
+        $(".project .museum h2 #for").css({ color: "#aaa" });
+        $(".project .museum .in #img4 img").css({ filter: "grayscale(1)" });
+      });
+
+      $(".project .museum .in #img5").mouseenter(function () {
+        $(".project .museum h2 #fiv").css({ color: "#6b4e45" });
+        $(".project .museum .in #img5 img").css({ filter: "grayscale(0)" });
+      });
+
+      $(".project .museum .in #img5").mouseleave(function () {
+        $(".project .museum h2 #fiv").css({ color: "#aaa" });
+        $(".project .museum .in #img5 img").css({ filter: "grayscale(1)" });
+      });
+
+      function setMuseumHoverEvents() {
+        const isDesktop = $(window).width() > 1024;
+
+        // 모든 이벤트 제거 (중복 방지)
+        $(".project .museum .in div[id^='img']").off("mouseenter mouseleave");
+        if (isDesktop) {
+          // 데스크톱 이상에서만 실행
+          $("#img1")
+            .on("mouseenter", function () {
+              $("#fir").css({ color: "#6b4e45" });
+              $("#img1 img").css({ filter: "grayscale(0)" });
+            })
+            .on("mouseleave", function () {
+              $("#fir").css({ color: "#aaa" });
+              $("#img1 img").css({ filter: "grayscale(1)" });
+            });
+
+          $("#img2")
+            .on("mouseenter", function () {
+              $("#sec").css({ color: "#6b4e45" });
+              $("#img2 img").css({ filter: "grayscale(0)" });
+            })
+            .on("mouseleave", function () {
+              $("#sec").css({ color: "#aaa" });
+              $("#img2 img").css({ filter: "grayscale(1)" });
+            });
+
+          $("#img3")
+            .on("mouseenter", function () {
+              $("#trd").css({ color: "#6b4e45" });
+              $("#img3 img").css({ filter: "grayscale(0)" });
+            })
+            .on("mouseleave", function () {
+              $("#trd").css({ color: "#aaa" });
+              $("#img3 img").css({ filter: "grayscale(1)" });
+            });
+
+          $("#img4")
+            .on("mouseenter", function () {
+              $("#for").css({ color: "#6b4e45" });
+              $("#img4 img").css({ filter: "grayscale(0)" });
+            })
+            .on("mouseleave", function () {
+              $("#for").css({ color: "#aaa" });
+              $("#img4 img").css({ filter: "grayscale(1)" });
+            });
+
+          $("#img5")
+            .on("mouseenter", function () {
+              $("#fiv").css({ color: "#6b4e45" });
+              $("#img5 img").css({ filter: "grayscale(0)" });
+            })
+            .on("mouseleave", function () {
+              $("#fiv").css({ color: "#aaa" });
+              $("#img5 img").css({ filter: "grayscale(1)" });
+            });
+        }
+      }
+
+      // 화면 로드 & 화면 크기 변경 시 적용
+      $(window).on("load resize", setMuseumHoverEvents);
     </script>
   </body>
 </html>
