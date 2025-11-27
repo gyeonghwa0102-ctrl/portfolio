@@ -14,7 +14,7 @@
   }
   #section2 .info {
     flex-direction: column;
-    padding-left: 50px;
+    padding: 0 50px;
     box-sizing: border-box;
   }
   /* #section2 .edu > div {
@@ -65,8 +65,32 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .nav .menu {
+    gap: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
   #section1 .main p {
     display: none;
+  }
+  #section1 .main .txt > li:nth-child(2) {
+    font-size: 70px;
+  }
+  #section1 .main .txt > li:nth-child(3) {
+    font-size: 70px;
+  }
+  #section1 .main ul li:nth-child(4) {
+    font-size: 30px;
+  }
+  #section1 .main ul li:nth-child(4) br {
+    display: block;
+  }
+  #section1 .main .bt li a {
+    display: none;
+  }
+  #section2 .info .tool div p {
+    font-size: 12px;
+    color: #1a1a1a;
   }
   #section3 .fir {
     padding: 0 50px;
@@ -84,10 +108,32 @@
     width: 100%;
     filter: none;
   }
+  .project .museum .in .text {
+    width: 90%;
+  }
+  .project .museum .in .text div {
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+  .project .museum .in .text div > p {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .project .museum .in .text .but li {
+    padding: 10px 40px;
+  }
   #section4 .con h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   #section4 .bot {
     flex-direction: column;
+  }
+  #section4 .index li:nth-child(2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 380px) {
+  #section1 .main {
+    margin-top: 200px;
   }
 }

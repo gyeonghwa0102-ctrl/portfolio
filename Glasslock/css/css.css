@@ -286,3 +286,13 @@ section.visual .swiper-slide:nth-child(5) .txt img {
     display: block;
   }
 }
+@media screen and (max-width: 500px) {
+  #fullmenu {
+    right: -200%;
+
+    width: 100%;
+  }
+  section.visual nav {
+    padding: 0 10px;
+  }
+}

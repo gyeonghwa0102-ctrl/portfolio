@@ -281,3 +281,15 @@ footer {
     background-size: 20px;
   }
 }
+@media screen and (max-width: 500px) {
+  #fullmenu {
+    right: -200%;
+    width: 100%;
+  }
+  section.visual nav .logo > a > h1 {
+    font-size: 20px;
+  }
+  section.visual nav .logo a > span {
+    font-size: 10px;
+  }
+}
