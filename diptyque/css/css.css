@@ -31,12 +31,24 @@ a {
   margin: 0 auto;
   font-family: "DiptyqueSaintGermain";
 }
-header nav {
-  margin-top: 50px;
+div#line {
   width: 100%;
+  height: 30px;
+  background-color: #d1aa5f;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 5px 50px;
+  box-sizing: border-box;
+}
+header nav {
+  width: 100%;
+  margin: 50px auto;
 }
 header nav ul {
   display: flex;
+  justify-content: center;
   justify-content: space-around;
   cursor: pointer;
 }
@@ -46,9 +58,14 @@ header nav ul li a {
 header nav ul li:nth-child(1) a {
   color: #d1aa5f;
 }
+/* header nav ul li:last-child {
+  filter: invert(100%);
+} */
 header .txt {
   margin-top: 150px;
   font-size: 35px;
+  padding: 0 50px;
+  box-sizing: border-box;
 }
 header .txt h1 {
   background-image: url(../img/gold-texture.gif);
@@ -94,7 +111,7 @@ main .one > #left {
   position: absolute;
   top: 0;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   z-index: 10;
   transition: transform 3s ease-in-out;
 }
@@ -213,6 +230,7 @@ main .two .right ul {
   overflow: hidden;
   position: relative;
 }
+
 .right ul li p {
   position: absolute;
   left: 5%;
@@ -226,6 +244,8 @@ main .two .right ul {
   font-weight: lighter;
 }
 .right ul li img {
+  width: 100%;
+  object-fit: cover;
   transform: scale(1);
   transition: 2s;
   cursor: pointer;
@@ -407,6 +427,10 @@ main .con .orpheon p:last-child {
   text-align: center;
   margin-bottom: 100px;
   cursor: pointer;
+}
+.fiv .write img {
+  width: 100%;
+  object-fit: cover;
 }
 .fiv .photo {
   flex: 1;
