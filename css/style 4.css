@@ -438,6 +438,10 @@ body {
   margin-top: 50px;
   margin-bottom: 20px;
 }
+.project .museum .in .text > p > span {
+  color: #6b4e45;
+  text-decoration: underline;
+}
 .project .museum .in .text .but {
   display: flex;
   justify-content: space-between;

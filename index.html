@@ -261,10 +261,49 @@
           </ul>
           <div class="project">
             <div class="museum">
-              <h2><span id="fir">01.</span> 국립고궁박물관</h2>
+              <h2><span id="fir">01.</span> 딥디크</h2>
               <hr />
               <div class="in">
                 <div class="img" id="img1">
+                  <img src="./img/diptyque.png" alt="" />
+                </div>
+                <div class="text">
+                  <h3>Description</h3>
+                  <p>
+                    예술적 감각을 바탕으로 한 니치 향수 브랜드인 딥디크의
+                    <span>리뉴얼</span> 입니다. <br />
+                    평소 딥디크 향수를 즐겨 사용하며 느꼈던 세련된 감성과 절제된
+                    아름다움을 웹에 구현하고 싶었습니다. <br />
+                    딥디크의 향처럼 은은하지만 확실한 존재감을 가진 디자인을
+                    목표로 했습니다. <br />
+                    jQuery를 조화롭게 활용해, 딥디크 특유의 감각은 유지하면서도
+                    동적이고 분위기 있는 브랜드 이미지를 구현하고자 했습니다.
+                  </p>
+                  <h2>Tool</h2>
+                  <div>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>jQuery</p>
+                  </div>
+                  <h2>기여도</h2>
+                  <p>퍼블리싱 100%</p>
+                  <p>디자인 100%</p>
+                  <ul class="but">
+                    <li>
+                      <a href="./diptyque/index.html" target="new"
+                        >View site
+                        <span><img src="./img/ic_contact.png" alt="" /></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="museum">
+              <h2><span id="sec">02.</span> 국립고궁박물관</h2>
+              <hr />
+              <div class="in">
+                <div class="img" id="img2">
                   <img src="./img/museum.png" alt="" />
                 </div>
                 <div class="text">
@@ -298,10 +337,10 @@
               </div>
             </div>
             <div class="museum">
-              <h2><span id="sec">02.</span> 글라스락</h2>
+              <h2><span id="trd">03.</span> 글라스락</h2>
               <hr />
               <div class="in">
-                <div class="img" id="img2">
+                <div class="img" id="img3">
                   <img src="./img/glasslock.png" alt="" />
                 </div>
                 <div class="text">
@@ -337,10 +376,10 @@
               </div>
             </div>
             <div class="museum">
-              <h2><span id="trd">03.</span> 버거킹</h2>
+              <h2><span id="for">04.</span> 버거킹</h2>
               <hr />
               <div class="in">
-                <div class="img" id="img3">
+                <div class="img" id="img4">
                   <img src="./img/burgerking.png" alt="" />
                 </div>
                 <div class="text">
@@ -374,10 +413,10 @@
               </div>
             </div>
             <div class="museum">
-              <h2><span id="for">04.</span> 삼다수</h2>
+              <h2><span id="fiv">05.</span> 삼다수</h2>
               <hr />
               <div class="in">
-                <div class="img" id="img4">
+                <div class="img" id="img5">
                   <img src="./img/samdasoo.png" alt="" />
                 </div>
                 <div class="text">
@@ -410,10 +449,10 @@
               </div>
             </div>
             <div class="museum">
-              <h2><span id="fiv">05.</span> SPC</h2>
+              <h2><span id="six">06.</span> SPC</h2>
               <hr />
               <div class="in">
-                <div class="img" id="img5">
+                <div class="img" id="img6">
                   <img src="./img/spc.png" alt="" />
                 </div>
                 <div class="text">
@@ -564,6 +603,15 @@
       $(".project .museum .in #img5").mouseleave(function () {
         $(".project .museum h2 #fiv").css({ color: "#aaa" });
         $(".project .museum .in #img5 img").css({ filter: "grayscale(1)" });
+      });
+      $("#img6").mouseenter(function () {
+        $("#six").css("color", "#6b4e45");
+        $("#img6 img").css("filter", "grayscale(0)");
+      });
+
+      $("#img6").mouseleave(function () {
+        $("#six").css("color", "#aaa");
+        $("#img6 img").css("filter", "grayscale(1)");
       });
 
       function setMuseumHoverEvents() {
