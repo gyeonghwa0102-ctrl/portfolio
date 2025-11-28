@@ -28,7 +28,7 @@
           <h2>Holiday Collection</h2>
         </div>
         <div class="con">
-          <video height="650px" muted loop>
+          <video height="650px" autoplay muted loop>
             <source
               src="https://videos.ctfassets.net/4sg0zck18nfj/4yZjRdJE0Cx9Tub1rMhZ6l/587b565fe967e32695fe7d63c82d1e61/HOLIDAY_2025_VIDEO_10SEC_PRIORITAIRE_MULTIPRODUITS_FAMILLE-SAPIN_16x9_1920x1080_DIPTYQUE_trimmed.mp4"
             />
@@ -38,8 +38,12 @@
       </header>
       <main>
         <div class="one">
-          <p class="on"><img src="./img/curtain-1275200_1280.png" alt="" /></p>
-          <p class="tw"><img src="./img/curtain-1275200_1280.png" alt="" /></p>
+          <div id="left">
+            <img src="./img/curtain-1275200_1280.png" alt="" />
+          </div>
+          <div id="right">
+            <img src="./img/curtain-1275200_1280.png" alt="" />
+          </div>
           <div class="container">
             <h1>옛날 옛적의 홀리데이 콜렉션</h1>
             <h3>
@@ -64,8 +68,14 @@
           </div>
           <div class="right">
             <ul>
-              <li><img src="./img/re.PNG" alt="" /></li>
-              <li><img src="./img/terty.PNG" alt="" /></li>
+              <li>
+                <img src="./img/re.PNG" alt="" />
+                <p>· Limited Edition ·</p>
+              </li>
+              <li>
+                <img src="./img/terty.PNG" alt="" />
+                <p>· Limited Edition ·</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -244,6 +254,18 @@
         trigger: "#section9",
         pin: true,
         scrub: true,
+      });
+
+      $(window).on("scroll", function () {
+        let scrollTop = $(this).scrollTop();
+        console.log("scrollTop:", $(this).scrollTop());
+        if (scrollTop > 500) {
+          $(".one #left").addClass("open");
+          $(".one #right").addClass("open");
+        } else {
+          $(".one #left").removeClass("open");
+          $(".one #right").removeClass("open");
+        }
       });
     </script>
   </body>
