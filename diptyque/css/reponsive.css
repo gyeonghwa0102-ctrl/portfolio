@@ -97,11 +97,35 @@
   }
 }
 @media screen and (max-width: 758px) {
+  div#line img {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+  #mobile {
+    opacity: 1;
+  }
+  header .con > p {
+    left: 70%;
+  }
   .container h1 {
     font-size: 30px;
   }
   .container h3 {
     font-size: 15px;
+  }
+  main .two {
+    text-align: center;
+  }
+  main .two .left {
+    padding: 0;
+  }
+  main .two .left p.but {
+    margin: 0 auto;
+  }
+  main .two .right {
+    width: 100%;
   }
   main .two .right ul {
     flex-direction: column;
@@ -110,12 +134,22 @@
     width: 100%;
   }
   main .con .doson {
-    left: 60%;
+    top: 15%;
+    left: 70%;
   }
+  main .con .rose {
+    top: 40%;
+    left: 5%;
+  }
+  main .con .orpheon {
+    top: 60%;
+    left: 70%;
+  }
+
   .fiv .write {
     padding: 0 50px;
     box-sizing: border-box;
-    margin: 50px;
+    margin: 50px auto;
   }
   .fiv .photo {
     display: none;
@@ -143,5 +177,114 @@
   .seven .contact li span {
     font-size: 12px;
     width: 80px;
+  }
+}
+@media screen and (max-width: 670px) {
+  main .con .doson {
+    width: 150px;
+    top: 5%;
+  }
+  main .con .doson p:last-child {
+    width: 80px;
+  }
+  main .con .doson h3 {
+    font-size: 8px;
+  }
+  main .con .doson p {
+    margin: 20px 0;
+    font-size: 10px;
+    margin: 10px 0;
+  }
+  main .con .rose {
+    width: 150px;
+  }
+  main .con .rose p:last-child {
+    width: 80px;
+  }
+  main .con .rose h3 {
+    font-size: 8px;
+  }
+  main .con .rose p {
+    margin: 20px 0;
+    font-size: 10px;
+    margin: 10px 0;
+  }
+  main .con .orpheon {
+    width: 150px;
+    top: 55%;
+  }
+  main .con .orpheon p:last-child {
+    width: 80px;
+  }
+  main .con .orpheon h3 {
+    font-size: 8px;
+  }
+  main .con .orpheon p {
+    margin: 20px 0;
+    font-size: 10px;
+    margin: 10px 0;
+  }
+  .seven .contact li p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .item_img {
+    width: 300px;
+  }
+  header .con > p {
+    left: 50%;
+  }
+  main .two {
+    text-align: left;
+  }
+  main .two .left h1 {
+    font-size: 50px;
+  }
+  main .two .left h2 {
+    font-size: 30px;
+  }
+  main .two .left h3 {
+    font-size: 15px;
+  }
+  main .two .left p.but {
+    margin: 0;
+    font-size: 12px;
+    width: 150px;
+  }
+  main .for #button p {
+    display: none;
+  }
+  main .con .doson {
+    opacity: 0;
+  }
+  main .con .rose {
+    opacity: 0;
+  }
+  main .con .orpheon {
+    opacity: 0;
+  }
+  .fiv .write p {
+    font-size: 15px;
+    margin-bottom: 50px;
+    white-space: nowrap;
+  }
+  .fiv .write span {
+    margin-bottom: 50px;
+  }
+  #section9 div h1 {
+    font-size: 30px;
+  }
+  .seven .des li p {
+    font-size: 6px;
+  }
+  .seven .contact li h3 {
+    font-size: 12px;
+  }
+  .seven .contact li p {
+    font-size: 6px;
+    margin-bottom: 10px;
+    white-space: nowrap;
   }
 }
