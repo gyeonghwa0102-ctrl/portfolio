@@ -368,24 +368,6 @@ section.con5 .simply-Scroll-clip #scroll {
   section .con > p {
     font-size: 0.875rem;
   }
-}
-@media screen and (max-width: 768px) {
-  #fullmenu {
-    width: 100%;
-  }
-  #menu:checked ~ section.visual::after {
-    display: none;
-  }
-  .visual h2 {
-    font-size: 2.5em !important;
-    font-weight: 400 !important;
-  }
-  .visual nav .right .mall {
-    display: none;
-  }
-  section .con {
-    padding: 0;
-  }
   section .con .swiper-slide img {
     height: 60px;
   }
@@ -397,5 +379,14 @@ section.con5 .simply-Scroll-clip #scroll {
     position: absolute;
     left: 6%;
     top: 65%;
+  }
+}
+@media screen and (max-width: 550px) {
+  #section6 {
+    flex-direction: column;
+    gap: 50px;
+  }
+  #section6 .right .sns {
+    justify-content: flex-start;
   }
 }
